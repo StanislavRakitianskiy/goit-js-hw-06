@@ -5,10 +5,16 @@ class StringBuilder {
     this.#value = initialValue;
   }
   getValue() {
-   return this.#value
+    return this.#value;
+  }
+  padStart(str) {
+    this.#value = str + this.#value;
   }
   padEnd(str) {
-    
+    this.#value += str;
+  }
+  padBoth(str) {
+    this.#value = str + this.#value + str;
   }
 }
 const builder = new StringBuilder(".");

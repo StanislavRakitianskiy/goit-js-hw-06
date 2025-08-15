@@ -1,17 +1,17 @@
 "use strict";
 class Storage {
-  #items
+  #items;
   constructor(initialItems) {
     this.#items = initialItems;
   }
   getItems() {
-    return this.#items
+    return this.#items;
   }
   addItem(newItem) {
-    this.#items.push(newItem)
+    this.#items.push(newItem);
   }
   removeItem(itemToRemove) {
-    this.#items = this.#items.filter(element => element !== itemToRemove)
+    this.#items = this.#items.filter((element) => element !== itemToRemove);
   }
 }
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
